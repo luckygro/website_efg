@@ -28,6 +28,16 @@ body {
     color: #29ABE2;
     margin-bottom: 15px;
   }
+
+  h4 {
+    margin: 0;
+    font-size: 18pt;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #29ABE2;
+  }
+
+
   
   button {
     display: block;
@@ -50,4 +60,9 @@ body {
     margin: 0;
     padding: 0;
     padding-bottom: 1em;
+  }
+
+  span {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 200;
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Remarkable from 'remarkable'
 
 // render components
 
@@ -10,6 +10,8 @@ function EventTile(props) {
     image,
     bibleText,
     bibleVerse,
+    dateDay,
+    dateTime,
     isImage = image 
   } = props.node
 
@@ -17,15 +19,16 @@ function EventTile(props) {
     <div style={{
       width: "50%",
       backgroundColor: "#fff",
-      padding: "20px",
       marginBottom: "20px"
       }}>
 
-      <h4 style={{margin: "0", padding: "0"}}>{title}</h4>
-      <span>{bibleText}</span>
-      <span>{bibleVerse}</span>
-
-      <div>
+      <div style={{backgroundColor: "#ddd", padding: "10px 20px"}}>
+        <h4 style={{margin: "0", padding: "0", color: "#fff"}}>{title}</h4>
+        <span style={{color: "#fff"}}>{dateDay}, {dateTime}</span>
+      </div>
+      <div style={{padding: "10px 20px"}}>
+        <p>{bibleText}</p>
+        <span>{bibleVerse}</span>
       </div>
     </div>
   )

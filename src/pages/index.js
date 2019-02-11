@@ -16,24 +16,10 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Header />
-          <Eyecatcher />
-          <Regular regularEventsList={regularEvents}/>
-          
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {regularEvents.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        </div>
+        <Helmet title={siteTitle} />
+        <Header />
+        <Eyecatcher />
+        <Regular regularEventsList={regularEvents}/>
       </Layout>
     )
   }
@@ -55,6 +41,8 @@ export const pageQuery = graphql`
           slug
           bibleText
           bibleVerse
+          dateDay
+          dateTime
           description {
             childMarkdownRemark {
               html
