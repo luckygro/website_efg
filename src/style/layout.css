@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+}
+
+.Container {
+    overflow: hidden;
+    width: 80%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 20px;
+    z-index: 200;
+  }
+
+  h1 {
+    font-size: 36pt;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #29ABE2;
+    margin: 0px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 22pt;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #29ABE2;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    display: block;
+    margin: 0;
+    font-size: 12pt;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #29ABE2;
+    box-shadow: 0px;
+    border: 0px;
+  }
+  
+  p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
+  }
