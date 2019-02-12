@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Remarkable from 'remarkable'
 
-// render components
+// render
+
+var md = new Remarkable({
+  html: true,
+  breaks: true,
+})
 
 function EventTile(props) {
 
@@ -12,6 +17,8 @@ function EventTile(props) {
     bibleVerse,
     dateDay,
     dateTime,
+    description,
+    descriptionhtml = md.render(description.description),
     isImage = image 
   } = props.node
 
@@ -24,12 +31,14 @@ function EventTile(props) {
 
       <div style={{backgroundColor: "#ddd", padding: "10px 20px"}}>
         <h4 style={{margin: "0", padding: "0", color: "#fff"}}>{title}</h4>
-        <span style={{color: "#fff"}}>{dateDay}, {dateTime}</span>
+        <span style={{color: "#fff"}}>{dateDay}, {dateTime} Uhr</span>
       </div>
       <div style={{padding: "10px 20px"}}>
-        <p>{bibleText}</p>
-        <span>{bibleVerse}</span>
+        <span dangerouslySetInnerHTML={{ __html: descriptionhtml }} />
+        <span style={{color: "#29ABE2"}}>{bibleText}</span>
+        <span style={{color: "#999"}}> - {bibleVerse}</span>
       </div>
+      
     </div>
   )
 }

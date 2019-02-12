@@ -55,9 +55,7 @@ export const pageQuery = graphql`
           dateDay
           dateTime
           description {
-            childMarkdownRemark {
-              html
-            }
+            description
           }
         }
       }
