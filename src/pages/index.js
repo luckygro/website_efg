@@ -12,13 +12,15 @@ import Regular from '../components/regular'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteContent = get(this, 'props.data.contentfulIntroduction')
     const regularEvents = get(this, 'props.data.allContentfulRegularEvents.edges')
+
 
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
         <Header />
-        <Eyecatcher />
+        <Eyecatcher content={siteContent}/>
         <Regular regularEventsList={regularEvents}/>
       </Layout>
     )
@@ -33,6 +35,15 @@ export const pageQuery = graphql`
       siteMetadata {
         title
       }
+    }
+    contentfulIntroduction (contentful_id: { eq: "1qiM8vQpKYEMgkS6ESseqe" }) {
+      title
+      subtitle
+      description {
+        description
+      }
+      buttonTitle
+      
     }
     allContentfulRegularEvents {
       edges {
