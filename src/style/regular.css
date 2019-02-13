@@ -1,0 +1,26 @@
+.EventTile {
+    width: 50%;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.TileHeader {
+    background-color: #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.TileContent {
+    padding: 0px 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: max-height 0.5s;
+}
+
+.TileContent div:first-child {
+    padding-top: 10px;
+}
+
+.TileContent div:last-child {
+    padding-bottom: 10px;
+}
