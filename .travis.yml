@@ -13,3 +13,9 @@ node_js:
 script:
   - npm install
   - npm run lint
+  - npm run build
+
+deploy:
+  provider: firebase
+  token:
+    secure: "fjMTxi1bu6GPW18rSuAmWFfHsTY1qC4BveoXg3S74XxroiIZtxfsDKWgJYzohKMKUt6I+rX9bGPQXFB6yKrAHwSiVI8RrHU5GGOP4jtDXLMlxzHn+fVhhrcX20Em3WUvDkum3p6chZL1zv95MOWX+96h4rxuVH/iALE1kpAVdyed6Yhn+lDL3Yk54QgKw66tV97QAvwkSc+dcrQ5YjHGwTIxku3FZJ0CrMaoFdbxJU3jjX7dgeJzP8Qpd52s0O6haqN+654tjGE5tN7UX2qIzoDBTotmFVklHV1tkcCl2026j250orBnfPKgvPVKIdpobT7L1VMnLAvV0eaqqCv5CY+tTB8jz12zkY+FY1r6qtp8rtXI9AZSBVBcG59UVqKqmcLrnkyo4d2meylHlI5LxxHlwg6ITv0GbIkZjXO+R5YN+IEvcsHiTd0PMih0o4WxJmAYg5kDX3bdRYA67YiE8Al9bQlRjWQrxiTPLaU2bomZhjbJxlpvdRGC20JkowUscdb36yN2hZjII4eyb4cp8k9B30ImPsfshGFDfIT5zGOBfcx59YW+5loeRwPHE2qd4u1GmLxuwT6sfxuUd5keWqjKtxRsSJ5bGUBv7oEaH/x22W4vTEeTBqDWa5F+3CN/oTyS83Et8QRgme+myV1TkGvT+ryhq/2SVNwyEef11Dk="
