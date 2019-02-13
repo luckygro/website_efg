@@ -68,6 +68,13 @@ export const pageQuery = graphql`
           title
           slug
           dateTime
+          download {
+            file {
+              url
+              fileName
+              contentType
+            }
+          }
         }
       }
     }

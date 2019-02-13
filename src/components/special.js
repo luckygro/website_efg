@@ -8,7 +8,9 @@ function SpecialEvent(props) {
 
     const {
         title,
-        dateTime
+        dateTime,
+        download,
+        isDownload = download
     } = props.content
 
     let now = moment()
@@ -26,6 +28,7 @@ function SpecialEvent(props) {
                 <i style={{marginRight: '8px'}}><FontAwesomeIcon icon={faCalendar} /></i>
                 <Moment format="D. MMMM YYYY HH:mm">{dateTime}</Moment> Uhr
             </span>
+            {isDownload ? <a target="_blanc" href={download.file.url}>Mehr Informationen</a> : null}
         </div>
 
     )
