@@ -87,6 +87,7 @@ class Regular extends Component {
   render() {
     const regularEvents = this.props.regularEventsList
     const specialEvents = this.props.specialEventsList
+    const moreEventsHtml = md.render(this.props.moreEvents)
     
     return (
         <section style={{backgroundColor: "#eee"}}>
@@ -101,6 +102,8 @@ class Regular extends Component {
                     )
                   })}
               </div>
+
+              <div dangerouslySetInnerHTML={{ __html: moreEventsHtml }} />
             </div>
             
             <div style={{width: '40%', float: 'left', position: 'relative'}}>
@@ -112,6 +115,7 @@ class Regular extends Component {
             </div>
 
           </div>
+
         </section>
     );
   }

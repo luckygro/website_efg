@@ -46,7 +46,7 @@ class Address extends React.Component {
 
                     <h3>Evangelisch Freie Gemeinde</h3>
 
-                    <div className="AddressAddress">
+                    <div classNamegit ="AddressAddress">
                         <span>
                             <i><FontAwesomeIcon icon={faMapMarker} /></i>
                             Zerrenerstraße 53 <br/>

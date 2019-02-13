@@ -3,66 +3,100 @@ body {
 }
 
 .Container {
-    overflow: hidden;
-    width: 80%;
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 60px 20px;
-    z-index: 200;
-  }
+  overflow: hidden;
+  width: 80%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 20px;
+  z-index: 200;
+}
 
-  h1 {
-    font-size: 36pt;
-    font-family: "Roboto";
-    font-weight: 300;
-    color: #29ABE2;
-    margin: 0px;
-  }
-  
-  h3 {
-    margin: 0;
-    font-size: 22pt;
-    font-family: "Roboto";
-    font-weight: 300;
-    color: #29ABE2;
-    margin-bottom: 15px;
-  }
+h1 {
+  font-size: 36pt;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #29ABE2;
+  margin: 0px;
+  margin-bottom: 20px;
+}
 
-  h4 {
-    margin: 0;
-    font-size: 18pt;
-    font-family: "Roboto";
-    font-weight: 300;
-    color: #29ABE2;
-  }
+h2 {
+  font-size: 28pt;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #29ABE2;
+  margin: 0px;
+  margin-bottom: 10px;
+}
 
+h3 {
+  margin: 0;
+  font-size: 22pt;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #29ABE2;
+  margin-bottom: 15px;
+}
 
-  
-  button {
-    display: block;
-    margin: 0;
-    font-size: 12pt;
-    font-family: "Roboto";
-    font-weight: 300;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #29ABE2;
-    box-shadow: 0px;
-    border: 0px;
-  }
-  
-  p, a {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 200;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 1em;
-  }
+h4 {
+  margin: 0;
+  font-size: 18pt;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #29ABE2;
+}
 
-  span {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 200;
-  }
+button {
+  display: block;
+  margin: 0;
+  font-size: 12pt;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #29ABE2;
+  box-shadow: 0px;
+  border: 0px;
+  cursor: pointer;
+}
+
+button:active, button:focus {
+  box-shadow: none;
+  border: 0px;
+}
+
+p, a {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1em;
+}
+
+article p {
+  margin-bottom: 0.5em;
+}
+
+span {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 200;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  padding: 10px;
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #666;
+}

@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import Eyecatcher from '../components/eyecatcher'
+import Welcome from '../components/welcome'
 import Regular from '../components/regular'
 import Address from '../components/address'
 
@@ -17,13 +18,13 @@ class RootIndex extends React.Component {
     const regularEvents = get(this, 'props.data.allContentfulRegularEvents.edges')
     const specialEvents = get(this, 'props.data.allContentfulSpecialEvent.edges')
 
-
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
         <Header />
-        <Eyecatcher content={siteContent}/>
-        <Regular regularEventsList={regularEvents} specialEventsList={specialEvents}/>
+        <Eyecatcher/>
+        <Welcome  content={siteContent}/>
+        <Regular regularEventsList={regularEvents} specialEventsList={specialEvents} moreEvents={siteContent.weitereVeranstaltungen.weitereVeranstaltungen}/>
         <Address />
       </Layout>
     )
@@ -46,7 +47,9 @@ export const pageQuery = graphql`
         description
       }
       buttonTitle
-      
+      weitereVeranstaltungen {
+        weitereVeranstaltungen
+      }
     }
     allContentfulRegularEvents {
       edges {

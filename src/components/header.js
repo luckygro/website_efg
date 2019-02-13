@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 import logo from '../images/efg_logo.png'
 
@@ -12,6 +13,14 @@ class Header extends Component {
             <div className="LogoImage" >
               <img alt="Logo der evangelisch freien Gemeinde in Pforzheim" src={logo} ></img>
             </div>
+            <nav>
+              <div>
+                <a href="/">Home</a>
+                <a href="/glaubensbekenntnis">Glaubensbekenntnis</a>
+                <a href="/#kontakt">Kontakt</a>
+                <a href="/impressum">Impressum</a>
+              </div>
+            </nav>
           </div>
         </header>
     );

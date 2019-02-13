@@ -6,6 +6,7 @@ import Remarkable from 'remarkable'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
+import Eyecatcher from '../components/eyecatcher';
 
 // render
 var md = new Remarkable({
@@ -27,8 +28,17 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
         <Header />
+        <Eyecatcher size='small' />
         <article>
-          <div className="Container">
+          <div className="Container" style={
+            {
+                position: 'relative',
+                top: '-133px',
+                backgroundColor: '#fff',
+                paddingTop: '20px',
+                zIndex: 1111
+            }
+          }>            
             <h1>{title}</h1>
             <div dangerouslySetInnerHTML={{ __html: texthtml }} />
           </div>
