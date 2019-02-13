@@ -1,0 +1,15 @@
+.AddressContent > div {
+    width: 50%;
+    float: left;
+}
+
+.AddressContent span {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+}
+
+.AddressContent span i {
+    margin-right: 10px;
+    color: #29ABE2;
+}

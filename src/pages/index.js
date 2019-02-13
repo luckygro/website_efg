@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import Eyecatcher from '../components/eyecatcher'
 import Regular from '../components/regular'
-import Special from '../components/special'
+import Address from '../components/address'
 
 
 class RootIndex extends React.Component {
@@ -24,6 +24,7 @@ class RootIndex extends React.Component {
         <Header />
         <Eyecatcher content={siteContent}/>
         <Regular regularEventsList={regularEvents} specialEventsList={specialEvents}/>
+        <Address />
       </Layout>
     )
   }
