@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Remarkable from 'remarkable'
 
+import Special from './special'
+
 import '../style/regular.css'
 
 // render
@@ -84,18 +86,31 @@ const RegularEvents = ({ list }) => (
 class Regular extends Component {
   render() {
     const regularEvents = this.props.regularEventsList
+    const specialEvents = this.props.specialEventsList
     
     return (
         <section style={{backgroundColor: "#eee"}}>
           <div className="Container">
-            <h3>Veranstaltungen</h3>
-            <div>
-              {regularEvents.map(({ node }) => {
-                  return (
-                    <EventTile content={node} key={node.slug} />
-                  )
-                })}
+            <div style={{width: '60%', float: 'left'}} >
+              <h3>Veranstaltungen</h3>
+              <p>Wir freuen uns, Sie bei unseren regelmäßigen Veranstaltungen begrüßen zu dürfen. Diese finden in den Räumen unserer Gemeinde in Pforzheim statt. Wenn Sie mehr Informationen wünschen, klicken Sie bitte auf die jeweilige Veranstaltung.</p>
+              <div>
+                {regularEvents.map(({ node }) => {
+                    return (
+                      <EventTile content={node} key={node.slug} />
+                    )
+                  })}
+              </div>
             </div>
+            
+            <div style={{width: '40%', float: 'left', position: 'relative'}}>
+              <div style={{backgroundColor: '#fff', marginLeft: '20px', padding: '20px', top: '-20px', position: 'relative'}}>
+                <h3>besondere Veranstaltungen</h3>
+                <Special specialEventsList={specialEvents}/>
+              </div>
+              
+            </div>
+
           </div>
         </section>
     );

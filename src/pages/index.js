@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import Eyecatcher from '../components/eyecatcher'
 import Regular from '../components/regular'
+import Special from '../components/special'
 
 
 class RootIndex extends React.Component {
@@ -14,6 +15,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteContent = get(this, 'props.data.contentfulIntroduction')
     const regularEvents = get(this, 'props.data.allContentfulRegularEvents.edges')
+    const specialEvents = get(this, 'props.data.allContentfulSpecialEvent.edges')
 
 
     return (
@@ -21,7 +23,7 @@ class RootIndex extends React.Component {
         <Helmet title={siteTitle} />
         <Header />
         <Eyecatcher content={siteContent}/>
-        <Regular regularEventsList={regularEvents}/>
+        <Regular regularEventsList={regularEvents} specialEventsList={specialEvents}/>
       </Layout>
     )
   }
@@ -57,6 +59,15 @@ export const pageQuery = graphql`
           description {
             description
           }
+        }
+      }
+    }
+    allContentfulSpecialEvent(sort: {fields: dateTime, order: ASC}) {
+      edges {
+        node {
+          title
+          slug
+          dateTime
         }
       }
     }
