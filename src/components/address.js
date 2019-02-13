@@ -22,7 +22,7 @@ class Address extends React.Component {
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
                     integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
                     crossOrigin=""/>
-                <Map style={{ width: '100%', height: '600px' }} center={position} zoom={this.state.zoom}>
+                <Map style={{ width: '100%', height: '400px' }} center={position} zoom={this.state.zoom}>
                     <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -37,7 +37,7 @@ class Address extends React.Component {
                 <div className="Container AddressContent" style={
                     {
                         position: 'relative',
-                        top: '-150px',
+                        top: '-133px',
                         backgroundColor: '#fff',
                         paddingTop: '20px',
                         zIndex: 1111
@@ -46,7 +46,7 @@ class Address extends React.Component {
 
                     <h3>Evangelisch Freie Gemeinde</h3>
 
-                    <div class="AddressAddress">
+                    <div className="AddressAddress">
                         <span>
                             <i><FontAwesomeIcon icon={faMapMarker} /></i>
                             Zerrenerstraße 53 <br/>
@@ -55,7 +55,7 @@ class Address extends React.Component {
                         
                     </div>
 
-                    <div class="AddressContact">
+                    <div className="AddressContact">
                         <span>
                             <i><FontAwesomeIcon icon={faPhoneSquare} /></i>
                             07231/480256 oder 0160/95762453
