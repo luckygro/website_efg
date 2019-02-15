@@ -27,7 +27,6 @@ class Header extends Component {
         style: {maxHeight: '300px'}
       })
     }
-    console.log(this.state.status)
   } 
  
   render() {
