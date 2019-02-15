@@ -24,6 +24,47 @@
     padding-bottom: 10px;
 }
 
+.EventLeft {
+    float: left;
+    width: 60%;
+}
+
+.EventRight {
+    width: 40%;
+    float: left;
+    position: relative;
+}
+
+.EventRight > div {
+    background-color: #fff;
+    margin-left: 20px;
+    padding: 20px;
+    top: -20px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .EventLeft {
+        width: 100%;
+    }
+    
+    .EventRight {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    
+    .EventRight > div {
+        background-color: transparent;
+        margin-left: 0px;
+        padding: 0px;
+        padding-top: 20px;
+        top: 0px;
+        position: relative;
+    }
+} 
+
+
 .SpecialEventTile {
     color: #fff;
     padding: 10px;
@@ -55,3 +96,4 @@
     box-shadow: 0px;
     border: 0px;
 }
+

@@ -92,7 +92,7 @@ class Regular extends Component {
     return (
         <section style={{backgroundColor: "#eee"}}>
           <div className="Container">
-            <div style={{width: '60%', float: 'left'}} >
+            <div className="EventLeft" >
               <h3>Veranstaltungen</h3>
               <p>Wir freuen uns, Sie bei unseren regelmäßigen Veranstaltungen begrüßen zu dürfen. Diese finden in den Räumen unserer Gemeinde in Pforzheim statt. Wenn Sie mehr Informationen wünschen, klicken Sie bitte auf die jeweilige Veranstaltung.</p>
               <div>
@@ -106,8 +106,8 @@ class Regular extends Component {
               <div dangerouslySetInnerHTML={{ __html: moreEventsHtml }} />
             </div>
             
-            <div style={{width: '40%', float: 'left', position: 'relative'}}>
-              <div style={{backgroundColor: '#fff', marginLeft: '20px', padding: '20px', top: '-20px', position: 'relative'}}>
+            <div className="EventRight">
+              <div>
                 <h3>besondere Veranstaltungen</h3>
                 <Special specialEventsList={specialEvents}/>
               </div>
