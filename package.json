@@ -1,10 +1,10 @@
 {
   "name": "gatsby-contentful-starter",
-  "description": "Starter Contentful Gatsby Blog",
+  "description": "Website EFG in Pforzheim",
   "version": "1.0.0",
-  "author": "Stefan Judis <stefanjudis@gmail.com>",
+  "author": "Lukas Grossmann - lukas@luckyg.de",
   "bugs": {
-    "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
+    "url": "https://github.com/luckygro/website_efg/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
@@ -44,7 +44,7 @@
     "rimraf": "^2.6.2",
     "yargs-parser": "^11.0.0"
   },
-  "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
+  "homepage": "https://github.com/luckygro/website_efg#readme",
   "keywords": [
     "gatsby",
     "contentful"
@@ -53,7 +53,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
+    "url": "git+https://github.com/luckygro/website_efg.git"
   },
   "scripts": {
     "dev": "gatsby develop",
