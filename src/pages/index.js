@@ -8,7 +8,7 @@ import Eyecatcher from '../components/eyecatcher'
 import Welcome from '../components/welcome'
 import Regular from '../components/regular'
 import Address from '../components/address'
-
+import Footer from '../components/footer'
 
 class RootIndex extends React.Component {
   render() {
@@ -24,6 +24,7 @@ class RootIndex extends React.Component {
         <Welcome  content={siteContent}/>
         <Regular regularEventsList={regularEvents} specialEventsList={specialEvents} moreEvents={siteContent.weitereVeranstaltungen.weitereVeranstaltungen}/>
         <Address />
+        <Footer />
       </Layout>
     )
   }
