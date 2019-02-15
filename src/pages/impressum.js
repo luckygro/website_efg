@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import Remarkable from 'remarkable'
 
 import Layout from '../components/layout'
@@ -17,13 +16,12 @@ var md = new Remarkable({
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteMetadata = get(this, 'props.data.site.siteMetadata')
     const text = get(this, 'props.data.contentfulIntroduction.impressum.impressum')
     const texthtml = md.render(text)
 
     return (
-      <Layout location={this.props.location} >
-        <Helmet title={siteTitle} />
+      <Layout meta={siteMetadata} >
         <Header />
         <Eyecatcher size='small' />
         <article>
@@ -51,6 +49,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        keywords
       }
     }
     contentfulIntroduction (contentful_id: { eq: "1qiM8vQpKYEMgkS6ESseqe" }) {

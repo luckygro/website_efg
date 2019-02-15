@@ -12,16 +12,12 @@ function Eyecatcher(props) {
     heightvalue = '500px'
   }
 
-  console.log(heightvalue)
-
   var eyecatcherBackground = {
     backgroundImage: "url(" + eyecatcher + ")",
     height: heightvalue,
     backgroundSize: "cover",
     backgroundAlignment: "50% 50%"
   };
-
-
 
   return (
     <section>

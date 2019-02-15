@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
@@ -19,12 +18,7 @@ class RootIndex extends React.Component {
     const specialEvents = get(this, 'props.data.allContentfulSpecialEvent.edges')
 
     return (
-      <Layout location={this.props.location} >
-        <Helmet>
-          <title>{siteMetadata.title}</title>
-          <meta name="description" content={siteMetadata.description} />
-          <meta name="keywords" content={siteMetadata.keywords} />
-        </Helmet>
+      <Layout meta={siteMetadata} >
         <Header />
         <Eyecatcher/>
         <Welcome  content={siteContent}/>
