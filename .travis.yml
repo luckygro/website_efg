@@ -7,8 +7,7 @@ node_js:
   - "node"
 
 script:
-  - yarn
   - yarn run build
 after_success:
-  - yarn install firebase-tools
+  - yarn add firebase-tools
   - firebase deploy --token $FIREBASE_TOKEN
