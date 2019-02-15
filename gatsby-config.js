@@ -22,6 +22,8 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Evangelisch Freie Gemeinde in Pforzheim',
+    description: 'Wir sind eine freie christliche Gemeinde mit evangelischer, biblischer Ausrichtung. Unsere Glaubens- und Lebensmitte ist Jesus Christus - der Sohn Gottes. EFG in Pforzheim',
+    keywords: 'freie, Gemeinde, Pforzheim, Bibeltreu, evangelisch, Zerrennerstraße, EFG',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

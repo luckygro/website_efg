@@ -13,14 +13,18 @@ import Address from '../components/address'
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteMetadata = get(this, 'props.data.site.siteMetadata')
     const siteContent = get(this, 'props.data.contentfulIntroduction')
     const regularEvents = get(this, 'props.data.allContentfulRegularEvents.edges')
     const specialEvents = get(this, 'props.data.allContentfulSpecialEvent.edges')
 
     return (
       <Layout location={this.props.location} >
-        <Helmet title={siteTitle} />
+        <Helmet>
+          <title>{siteMetadata.title}</title>
+          <meta name="description" content={siteMetadata.description} />
+          <meta name="keywords" content={siteMetadata.keywords} />
+        </Helmet>
         <Header />
         <Eyecatcher/>
         <Welcome  content={siteContent}/>
@@ -38,6 +42,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        keywords
       }
     }
     contentfulIntroduction (contentful_id: { eq: "1qiM8vQpKYEMgkS6ESseqe" }) {
