@@ -19,3 +19,42 @@ header .Container {
 .LogoImage img {
     max-height: 100%;
 }
+
+header button {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    header button {
+        display: block;
+        float: right;
+    }
+
+    .LogoImage {
+        height: 45px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+
+    nav > div {
+        margin-top: 40px;
+    }
+
+    nav.close {
+        max-height: 0px;
+        transition: max-height 0.5s;
+        overflow-y: hidden;
+    }
+    
+    nav.open {
+        max-height: 600px;  
+    }
+
+    nav a {
+        display: block;
+    }
+}

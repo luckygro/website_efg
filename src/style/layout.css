@@ -12,6 +12,18 @@ body {
   z-index: 200;
 }
 
+@media (max-width: 375px) {
+
+  .Container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+  }
+ 
+}
+
 h1 {
   font-size: 36pt;
   font-family: "Roboto";
@@ -47,6 +59,25 @@ h4 {
   color: #29ABE2;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22pt;
+  }
+
+  h2 {
+    font-size: 19pt;
+  }
+
+  h3 {
+    font-size: 16pt;
+  }
+
+  h4 {
+    font-size: 14pt;
+  }
+
+}
+
 button {
   display: block;
   margin: 0;
@@ -63,9 +94,10 @@ button {
   cursor: pointer;
 }
 
-button:active, button:focus {
+button:active, button:focus, button:hover {
   box-shadow: none;
   border: 0px;
+  outline: none;
 }
 
 p, a {
