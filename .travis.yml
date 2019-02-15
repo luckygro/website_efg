@@ -9,8 +9,5 @@ node_js:
 script:
   - npm install
   - yarn run build
-
-deploy:
-  provider: firebase
-  token:
-    secure: FIREBASE_TOKEN
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
