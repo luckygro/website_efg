@@ -3,6 +3,10 @@ language: node_js
 os:
   - linux
 
+branches:
+  only:
+  - master
+
 node_js:
   - "node"
 
